@@ -1,4 +1,4 @@
-const Userinputs = () => {
+const UserInputs = () => {
   return (
     <form>
       <div>
@@ -16,4 +16,4 @@ const Userinputs = () => {
   );
 };
 
-export default Userinputs;
+export default UserInputs;

@@ -1,11 +1,13 @@
-import Userinputs from "./components/Userinputs";
-import Userslist from "./components/Userslist";
+import ErrorModal from "./components/ErrorModal";
+import UserInputs from "./components/UserInputs";
+import UsersList from "./components/UsersList";
 
 const App = () => {
   return (
     <div className="App">
-      <Userinputs />
-      <Userslist />
+      <UserInputs />
+      <UsersList />
+      <ErrorModal />
     </div>
   );
 };
