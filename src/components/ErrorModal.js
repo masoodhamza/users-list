@@ -1,13 +1,13 @@
-import React from "react";
+import Button from "./Button";
 
-const Errormodal = () => {
+const ErrorModal = () => {
   return (
     <div>
       <h1>Invalid Input</h1>
       <p>Please enter a valid name & age</p>
-      <button>Okay</button>
+      <Button>OK</Button>
     </div>
   );
 };
 
-export default Errormodal;
+export default ErrorModal;

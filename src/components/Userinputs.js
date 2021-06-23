@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 const UserInputs = () => {
   return (
     <form>
@@ -11,7 +13,7 @@ const UserInputs = () => {
         <input type="number" name="age" id="age" />
       </div>
 
-      <button type="submit">AddUser</button>
+      <Button>Add User</Button>
     </form>
   );
 };
