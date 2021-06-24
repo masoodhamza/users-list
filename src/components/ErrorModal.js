@@ -1,6 +1,6 @@
 import Button from "./Button";
 
-const ErrorModal = () => {
+const ErrorModal = (props) => {
   return (
     <div>
       <h1>Invalid Input</h1>
