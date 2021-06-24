@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "./Button";
 import ErrorModal from "./ErrorModal";
+import style from "./NewUser.module.css";
 
 const NewUsers = (props) => {
   const [name, setName] = useState("");
@@ -56,7 +57,7 @@ const NewUsers = (props) => {
         />
       )}
 
-      <form onSubmit={formSubmitHandler}>
+      <form onSubmit={formSubmitHandler} className={`${style["form-control"]}`}>
         <div>
           <label htmlFor="username">Username</label>
           <input

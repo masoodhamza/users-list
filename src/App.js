@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NewUsers from "./components/NewUser";
 import AllUsers from "./components/AllUsers";
+import style from "./App.module.css";
 
 const App = () => {
   const [addUsers, setAddUsers] = useState([]);
@@ -21,7 +22,7 @@ const App = () => {
   console.log(addUsers);
 
   return (
-    <div className="App">
+    <div className={style.App}>
       <NewUsers onAddUser={addUserHandler} />
       <AllUsers users={addUsers} />
     </div>
