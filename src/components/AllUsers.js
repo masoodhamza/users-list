@@ -1,7 +1,6 @@
-const UsersList = (props) => {
+const AllUsers = (props) => {
   return (
-    <ul>
-      <li>data</li>
+    <ul>      
       {props.users.map((user) => (
         <li key={user.id}>
           {user.name} age is {user.age}
@@ -11,4 +10,4 @@ const UsersList = (props) => {
   );
 };
 
-export default UsersList;
+export default AllUsers;

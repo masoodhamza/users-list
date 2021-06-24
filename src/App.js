@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import UserInputs from "./components/UserInputs";
-import UsersList from "./components/UsersList";
+import NewUsers from "./components/NewUser";
+import AllUsers from "./components/AllUsers";
 
 const App = () => {
   const [addUsers, setAddUsers] = useState([]);
@@ -22,8 +22,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <UserInputs onAddUser={addUserHandler} />
-      <UsersList users={addUsers} />
+      <NewUsers onAddUser={addUserHandler} />
+      <AllUsers users={addUsers} />
     </div>
   );
 };

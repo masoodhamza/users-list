@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import ErrorModal from "./ErrorModal";
 
-const UserInputs = (props) => {
+const NewUsers = (props) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [error, setError] = useState();
@@ -85,4 +85,4 @@ const UserInputs = (props) => {
   );
 };
 
-export default UserInputs;
+export default NewUsers;
