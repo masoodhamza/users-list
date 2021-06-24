@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import ErrorModal from "./ErrorModal";
 
-const UserInputs = () => {
+const UserInputs = (props) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [error, setError] = useState();
@@ -31,7 +31,7 @@ const UserInputs = () => {
       return;
     }
 
-    if (age < 0) {
+    if (age < 0 || age > 120) {
       console.log("age not valid");
       setError({
         title: "Invalid Age",
@@ -40,7 +40,10 @@ const UserInputs = () => {
       return;
     }
 
-    console.log(name, age);
+    props.onAddUser(name, age);
+
+    setName("");
+    setAge("");
   };
 
   return (

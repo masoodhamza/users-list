@@ -1,7 +1,12 @@
-const UsersList = () => {
+const UsersList = (props) => {
   return (
     <ul>
-      <li>this is output</li>
+      <li>data</li>
+      {props.users.map((user) => (
+        <li key={user.id}>
+          {user.name} age is {user.age}
+        </li>
+      ))}
     </ul>
   );
 };
