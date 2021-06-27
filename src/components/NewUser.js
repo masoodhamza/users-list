@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Button from "./Button";
 import ErrorModal from "./ErrorModal";
 import style from "./NewUser.module.css";
 
 const NewUsers = (props) => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
+  const nameInputRef = useRef();
+  const ageInputRef = useRef();
+
+  // const [name, setName] = useState("");
+  // const [age, setAge] = useState("");
   const [error, setError] = useState();
 
-  const nameChangeHandler = (e) => {
-    setName(e.target.value);
-  };
+  // const nameChangeHandler = (e) => {
+  //   setName(e.target.value);
+  // };
 
-  const ageChangeHandler = (e) => {
-    setAge(e.target.value);
-  };
+  // const ageChangeHandler = (e) => {
+  //   setAge(e.target.value);
+  // };
 
   const errorHandler = () => {
     setError(null);
@@ -22,6 +25,9 @@ const NewUsers = (props) => {
 
   const formSubmitHandler = (e) => {
     e.preventDefault();
+
+    const name = nameInputRef.current.value;
+    const age = ageInputRef.current.value;
 
     if (name.trim().length === 0 || age.trim().length === 0) {
       console.log("empty fields");
@@ -43,8 +49,11 @@ const NewUsers = (props) => {
 
     props.onAddUser(name, age);
 
-    setName("");
-    setAge("");
+    nameInputRef.current.value = "";
+    ageInputRef.current.value = "";
+
+    // setName("");
+    // setAge("");
   };
 
   return (
@@ -64,8 +73,9 @@ const NewUsers = (props) => {
             type="text"
             name="username"
             id="username"
-            onChange={nameChangeHandler}
-            value={name}
+            // onChange={nameChangeHandler}
+            // value={name}
+            ref={nameInputRef}
           />
         </div>
 
@@ -75,8 +85,9 @@ const NewUsers = (props) => {
             type="number"
             name="age"
             id="age"
-            onChange={ageChangeHandler}
-            value={age}
+            // onChange={ageChangeHandler}
+            // value={age}
+            ref={ageInputRef}
           />
         </div>
 
